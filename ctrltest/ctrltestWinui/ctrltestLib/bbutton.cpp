@@ -51,9 +51,6 @@ BOOL CBMTest1Dlg::OnInitDialog()
 	return TRUE;
 }
 
-
-
-
 BEGIN_MESSAGE_MAP(CBMTest2Dlg, CDialog)
 	//{{AFX_MSG_MAP(CBMTest2Dlg)
 	//}}AFX_MSG_MAP

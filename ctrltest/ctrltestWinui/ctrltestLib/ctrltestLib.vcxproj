@@ -185,6 +185,7 @@
   <ItemGroup>
     <ClCompile Include="bbutton.cpp" />
     <ClCompile Include="ctrltestLib.cpp" />
+    <ClCompile Include="ctrltestLibExported.cpp" />
     <ClCompile Include="custlist.cpp" />
     <ClCompile Include="dertest.cpp" />
     <ClCompile Include="paredit.cpp" />
@@ -206,6 +207,7 @@
   <ItemGroup>
     <ClInclude Include="bbutton.h" />
     <ClInclude Include="ctrltestLib.h" />
+    <ClInclude Include="ctrltestLibExported.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="paredit.h" />
     <ClInclude Include="pch.h" />

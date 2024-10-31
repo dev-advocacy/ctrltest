@@ -4,6 +4,9 @@
 #include "MainWindow.g.cpp"
 #endif
 
+
+#include "..\ctrltestLib\ctrltestLibExported.h"
+
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
 
@@ -26,4 +29,14 @@ namespace winrt::ctrltest::implementation
     {
         myButton().Content(box_value(L"Clicked"));
     }
+
+    void MainWindow::myButton2_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+    {
+        CBMTest1DlgExport dlg;
+		dlg.DoModal();
+    }
+
+
 }
+
+

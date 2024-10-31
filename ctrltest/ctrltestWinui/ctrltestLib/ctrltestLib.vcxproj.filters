@@ -13,11 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="exported">
+      <UniqueIdentifier>{28e1be33-68f2-4dc6-995c-d3645871cdc7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ctrltestLib.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -45,6 +45,12 @@
     <ClCompile Include="wclstest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ctrltestLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ctrltestLibExported.cpp">
+      <Filter>exported</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ctrltestLib.def">
@@ -64,9 +70,6 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ctrltestLib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -75,6 +78,12 @@
     </ClInclude>
     <ClInclude Include="bbutton.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ctrltestLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ctrltestLibExported.h">
+      <Filter>exported</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

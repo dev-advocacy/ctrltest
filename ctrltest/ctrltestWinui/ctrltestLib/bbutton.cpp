@@ -9,8 +9,9 @@
 // See these sources for detailed information regarding the
 // Microsoft Foundation Classes product.
 
-#include "stdafx.h"
+#include "pch.h"
 #include "ctrltest.h"
+
 
 /////////////////////////////////////////////////////////////////////////////
 // BitmapButton Test dialog #1

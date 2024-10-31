@@ -34,6 +34,13 @@ namespace winrt::ctrltest::implementation
     {
         CBMTest1DlgExport dlg;
 		dlg.DoModal();
+
+		CBMTest2DlgExport dlg2;
+		dlg2.DoModal();
+
+		CBMTest3DlgExport dlg3;
+		dlg3.DoModal();
+
     }
 
 

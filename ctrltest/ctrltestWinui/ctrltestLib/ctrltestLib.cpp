@@ -44,8 +44,9 @@ END_MESSAGE_MAP()
 
 CctrltestLibApp::CctrltestLibApp()
 {
-	// TODO: add construction code here,
-	// Place all significant initialization in InitInstance
+	//disable memory leak checking
+	_CrtSetDbgFlag(0);
+	
 }
 
 

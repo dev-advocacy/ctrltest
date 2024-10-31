@@ -73,6 +73,9 @@
     <ClInclude Include="paredit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="bbutton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ctrltestLib.rc">

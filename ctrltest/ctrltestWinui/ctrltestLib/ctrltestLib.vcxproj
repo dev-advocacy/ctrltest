@@ -204,6 +204,7 @@
     <None Include="res\ctrltestLib.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bbutton.h" />
     <ClInclude Include="ctrltestLib.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="paredit.h" />

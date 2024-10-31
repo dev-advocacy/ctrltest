@@ -48,8 +48,6 @@ CctrltestLibApp::CctrltestLibApp()
 	_CrtSetDbgFlag(0);
 	
 }
-
-
 // The one and only CctrltestLibApp object
 
 CctrltestLibApp theApp;

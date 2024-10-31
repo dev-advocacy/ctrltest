@@ -183,13 +183,21 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bbutton.cpp" />
     <ClCompile Include="ctrltestLib.cpp" />
+    <ClCompile Include="custlist.cpp" />
+    <ClCompile Include="dertest.cpp" />
+    <ClCompile Include="paredit.cpp" />
+    <ClCompile Include="paredit2.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="spintest.cpp" />
+    <ClCompile Include="subtest.cpp" />
+    <ClCompile Include="wclstest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ctrltestLib.def" />
@@ -198,6 +206,7 @@
   <ItemGroup>
     <ClInclude Include="ctrltestLib.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="paredit.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />

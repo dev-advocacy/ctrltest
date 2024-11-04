@@ -2,21 +2,24 @@
 
 #include "MainWindow.g.h"
 
+
+using namespace winrt;
+using namespace Microsoft::UI::Xaml;
+
+
+
 namespace winrt::ctrltest::implementation
 {
     struct MainWindow : MainWindowT<MainWindow>
     {
-        MainWindow()
-        {
-            // Xaml objects should not call InitializeComponent during construction.
-            // See https://github.com/microsoft/cppwinrt/tree/master/nuget#initializecomponent
-        }
+        MainWindow();
+        void MainFrame_Navigated(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs const& e);
+        /*void EnsureDispatcher();*/
+        ctrltest::MainViewModel ViewModel();
 
-        int32_t MyProperty();
-        void MyProperty(int32_t value);
-
-        void myButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
-        void myButton2_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
+	private:
+        /*winrt::Windows::System::DispatcherQueueController m_dispatcherQueueController{ nullptr };*/
+        ctrltest::MainViewModel m_mainViewModel{ nullptr };
     };
 }
 

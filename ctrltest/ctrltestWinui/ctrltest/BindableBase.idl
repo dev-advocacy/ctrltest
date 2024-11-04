@@ -1,0 +1,10 @@
+namespace ctrltest
+{
+    [bindable]
+    [default_interface]
+    runtimeclass BindableBase : Microsoft.UI.Xaml.DependencyObject, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        BindableBase();
+        protected void RaisePropertyChanged(String propertyName);
+    }
+}

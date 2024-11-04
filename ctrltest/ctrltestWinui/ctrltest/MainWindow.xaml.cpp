@@ -3,45 +3,63 @@
 #if __has_include("MainWindow.g.cpp")
 #include "MainWindow.g.cpp"
 #endif
+#include "INavigationService.h"
 
+
+
+#include <wil/cppwinrt.h>
+#include <wil/cppwinrt_helpers.h>
+#include <winrt/Microsoft.UI.Dispatching.h>
 
 #include "..\ctrltestLib\ctrltestLibExported.h"
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
+
+#include "MainViewModel.h"
 
 namespace winrt::ctrltest::implementation
 {
-    int32_t MainWindow::MyProperty()
-    {
-        throw hresult_not_implemented();
-    }
+	ctrltest::MainViewModel MainWindow::ViewModel()
+	{
+		return m_mainViewModel;
+	}
 
-    void MainWindow::MyProperty(int32_t /* value */)
-    {
-        throw hresult_not_implemented();
-    }
+	MainWindow::MainWindow()
+	{		
+		m_mainViewModel = winrt::make<ctrltest::implementation::MainViewModel>();
+		
+		INavigationService _navigationService;
+		InitializeComponent();
+		_navigationService.InitializeFrame(MainWindow::MainFrame());
+		_navigationService.NavigateTo(xaml_typename<MainPage>());
+	}
 
-    void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
-    {
-        myButton().Content(box_value(L"Clicked"));
-    }
+	void MainWindow::MainFrame_Navigated(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs const& e)
+	{
+		/*if (!MainFrame().CanGoBack())
+		{
+			INavigationService _navigationService;
+			_navigationService.InitializeFrame(MainWindow::MainFrame());
+		}*/
+	}
 
-    void MainWindow::myButton2_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+	
+
+	
+  /*  void MainWindow::myButton2_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
     {
         CBMTest1DlgExport dlg;
-		dlg.DoModal();
+	*/	//dlg.DoModal();
 
-		CBMTest2DlgExport dlg2;
-		dlg2.DoModal();
+		//CBMTest2DlgExport dlg2;
+		//dlg2.DoModal();
 
-		CBMTest3DlgExport dlg3;
-		dlg3.DoModal();
+		//CBMTest3DlgExport dlg3;
+		//dlg3.DoModal();
 
-    }
+  //  }
 
 
 }

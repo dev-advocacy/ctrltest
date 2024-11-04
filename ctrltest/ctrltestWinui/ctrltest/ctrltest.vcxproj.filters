@@ -5,16 +5,33 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow.xaml" />
+    <Page Include="MainPage.xaml">
+      <Filter>Pages</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainWindow.idl" />
+    <Midl Include="DelegateCommand.idl">
+      <Filter>Common</Filter>
+    </Midl>
+    <Midl Include="BindableBase.idl">
+      <Filter>Common</Filter>
+    </Midl>
+    <Midl Include="MainViewModel.idl">
+      <Filter>ViewModel</Filter>
+    </Midl>
+    <Midl Include="MainPageViewModel.idl">
+      <Filter>ViewModel</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="INavigationService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="INavigationService.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
@@ -43,6 +60,15 @@
     <Filter Include="Assets">
       <UniqueIdentifier>{baec778d-c8c1-4e8d-810e-21c78331b238}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{d74a745b-8587-4259-83fd-4c5cc2a8af47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewModel">
+      <UniqueIdentifier>{4de02fcc-52f4-436b-aa1d-ca5a3cc12e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pages">
+      <UniqueIdentifier>{44521b83-a0fd-4fe8-bed6-8651c386f658}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
@@ -51,9 +77,9 @@
     <Manifest Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

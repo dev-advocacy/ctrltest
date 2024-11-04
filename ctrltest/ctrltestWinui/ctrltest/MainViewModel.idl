@@ -1,0 +1,16 @@
+import "BindableBase.idl";
+import "DelegateCommand.idl";
+
+namespace ctrltest
+{
+    [bindable]
+    [default_interface]
+    runtimeclass MainViewModel 
+    {
+        MainViewModel();
+        String Title{ get; set; };
+		Double TextSize{ get; };
+		Microsoft.UI.Xaml.Input.ICommand OpenCommand{ get; };
+		Microsoft.UI.Xaml.Input.ICommand OnClickCommand{ get; };
+    }
+}

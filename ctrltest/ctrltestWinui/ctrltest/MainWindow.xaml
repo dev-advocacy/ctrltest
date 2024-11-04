@@ -9,8 +9,10 @@
     mc:Ignorable="d"
     Title="ctrltest">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-        <Button x:Name="myButton2" Click="myButton2_Click" >Test exports</Button>
-    </StackPanel>
+    <!--<Button x:Name="myButton"
+        Command="{x:Bind ViewModel.OnClickCommand}" 
+        CommandParameter="bla" 
+        Content="polo"/>-->
+
+    <Frame x:Name="MainFrame" Navigated="MainFrame_Navigated"/>
 </Window>

@@ -1,0 +1,9 @@
+namespace ctrltest
+{
+    [bindable]
+    [default_interface]
+    runtimeclass DelegateCommand : Microsoft.UI.Xaml.DependencyObject, Microsoft.UI.Xaml.Input.ICommand
+    {
+        void RaiseCanExecuteChanged();
+    }
+}

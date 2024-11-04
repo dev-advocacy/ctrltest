@@ -6,6 +6,7 @@
 
 using namespace winrt;
 using namespace Windows::UI::Xaml;
+using namespace winrt::Windows::UI::Xaml::Controls;
 
 #include "MainPageViewModel.h"
 
@@ -26,4 +27,25 @@ namespace winrt::ctrltest::implementation
     {
         m_mainViewModel = winrt::make<ctrltest::implementation::MainPageViewModel>();
     }    
+    void winrt::ctrltest::implementation::MainPage::bt1_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+    {		
+        BasicDialog();
+    }
+
+    winrt::fire_and_forget MainPage::BasicDialog()
+    {
+        DialogSample dialog{};
+		dialog.XamlRoot(this->Content().XamlRoot());
+		
+		winrt::Microsoft::UI::Xaml::Input::ManipulationModes dd1 = winrt::Microsoft::UI::Xaml::Input::ManipulationModes::All;
+
+        dialog.ManipulationMode(dd1);
+
+        dialog.Style(Microsoft::UI::Xaml::Application::Current().Resources().TryLookup(winrt::box_value(L"DefaultContentDialogStyle")).as<Microsoft::UI::Xaml::Style>());
+        dialog.Title(winrt::box_value(L"sample dialog"));
+        auto result{ co_await dialog.ShowAsync() };
+
+        if (result != winrt::Microsoft::UI::Xaml::Controls::ContentDialogResult::Primary)
+            co_return;        
+    }
 }

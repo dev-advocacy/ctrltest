@@ -8,6 +8,9 @@
     <Page Include="MainPage.xaml">
       <Filter>Pages</Filter>
     </Page>
+    <Page Include="DialogSample.xaml">
+      <Filter>Dialogs</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainWindow.idl" />
@@ -68,6 +71,9 @@
     </Filter>
     <Filter Include="Pages">
       <UniqueIdentifier>{44521b83-a0fd-4fe8-bed6-8651c386f658}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialogs">
+      <UniqueIdentifier>{0b65e9fe-8842-4f0a-a515-a7039b9ac97b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

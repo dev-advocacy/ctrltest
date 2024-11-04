@@ -25,6 +25,9 @@ namespace winrt::ctrltest::implementation
 
     private:
         ctrltest::MainPageViewModel m_mainViewModel{ nullptr };
+    public:
+        void bt1_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
+        winrt::fire_and_forget BasicDialog();
     };
 }
 

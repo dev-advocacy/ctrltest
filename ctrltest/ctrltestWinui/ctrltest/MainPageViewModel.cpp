@@ -9,7 +9,9 @@
 using namespace winrt;
 using namespace ctrltest::implementation;
 using namespace Windows::Foundation;
-
+using namespace Windows::UI::Xaml::Controls;
+using namespace Windows::UI::Xaml::Input;
+using Windows::UI::Xaml::Controls::ContentDialog;
 /// <summary>
 /// Initializes a new instance of the MainPageViewModel class.
 /// </summary>
@@ -28,7 +30,16 @@ void MainPageViewModel::MenuClick(IInspectable const& parameter)
 
     if (commandParameter == L"OpenCommand")
     {
-        // Handle Open command
+       
+        //picker.XamlRoot(this->XamlRoot());
+
+        
+
+        //auto result = co_await picker.ShowAsync();
+        /*if (result != ContentDialogResult::Primary) {
+            co_return;
+        }*/
+
     }
     else if (commandParameter == L"SaveCommand")
     {

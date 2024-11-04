@@ -116,6 +116,10 @@
       <DependentUpon>DelegateCommand.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="DialogSample.xaml.h">
+      <DependentUpon>DialogSample.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="INavigationService.h" />
     <ClInclude Include="MainPage.h">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -139,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
+    <Page Include="DialogSample.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -151,6 +158,10 @@
     </ClCompile>
     <ClCompile Include="DelegateCommand.cpp">
       <DependentUpon>DelegateCommand.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="DialogSample.xaml.cpp">
+      <DependentUpon>DialogSample.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="INavigationService.cpp" />
@@ -183,6 +194,10 @@
     </Midl>
     <Midl Include="DelegateCommand.idl">
       <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="DialogSample.idl">
+      <DependentUpon>DialogSample.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Midl>
     <Midl Include="MainPage.idl">
       <DependentUpon>MainPage.xaml</DependentUpon>

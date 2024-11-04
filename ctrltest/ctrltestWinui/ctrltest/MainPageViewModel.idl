@@ -7,10 +7,7 @@ namespace ctrltest
     [default_interface]
     runtimeclass MainPageViewModel 
     {
-        MainPageViewModel();
-        String Title{ get; set; };
-		Double TextSize{ get; };
-		Microsoft.UI.Xaml.Input.ICommand OpenCommand{ get; };
+        MainPageViewModel();        
 		Microsoft.UI.Xaml.Input.ICommand OnClickCommand{ get; };
     }
 }

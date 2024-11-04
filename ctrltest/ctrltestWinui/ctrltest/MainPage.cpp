@@ -11,12 +11,19 @@ using namespace Windows::UI::Xaml;
 
 namespace winrt::ctrltest::implementation
 {
-	ctrltest::MainPageViewModel MainPage::ViewModel()
-	{
-		return m_mainViewModel;
-	}
-	MainPage::MainPage()
-	{
-		m_mainViewModel = winrt::make<ctrltest::implementation::MainPageViewModel>();
-	}    
+    /// <summary>
+    /// Gets the ViewModel for the MainPage.
+    /// </summary>
+    /// <returns>The ViewModel for the MainPage.</returns>
+    ctrltest::MainPageViewModel MainPage::ViewModel()
+    {
+        return m_mainViewModel;
+    }
+    /// <summary>
+    /// Initializes a new instance of the MainPage class.
+    /// </summary>
+    MainPage::MainPage()
+    {
+        m_mainViewModel = winrt::make<ctrltest::implementation::MainPageViewModel>();
+    }    
 }

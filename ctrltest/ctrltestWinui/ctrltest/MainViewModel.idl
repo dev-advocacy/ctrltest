@@ -8,9 +8,5 @@ namespace ctrltest
     runtimeclass MainViewModel 
     {
         MainViewModel();
-        String Title{ get; set; };
-		Double TextSize{ get; };
-		Microsoft.UI.Xaml.Input.ICommand OpenCommand{ get; };
-		Microsoft.UI.Xaml.Input.ICommand OnClickCommand{ get; };
     }
 }

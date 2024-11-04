@@ -8,31 +8,14 @@ namespace winrt::ctrltest::implementation
 {
     struct MainPageViewModel : MainPageViewModelT<MainPageViewModel, BindableBase>
     {
+	public:
         MainPageViewModel();
-
-        winrt::hstring Title();
-        void Title(winrt::hstring const& value);
-        
-        double TextSize();
-
-
-
+    public:
         winrt::Microsoft::UI::Xaml::Input::ICommand OnClickCommand() { return clickCommand; }
-        winrt::Microsoft::UI::Xaml::Input::ICommand OpenCommand() { return openCommand; }
-
     private:
-        void Click(winrt::Windows::Foundation::IInspectable const& parameter);
-        void AnotherClick(IInspectable const& parameter);
-        void AnotherOpenCommand(IInspectable const& parameter);
-        //void AnotherOpenCommand(IInspectable const& parameter);
-        bool CanClick();
-
-        winrt::hstring          title;
-        double                  textSize;
-
+        void MenuClick(IInspectable const& parameter);
+    private:
         ctrltest::DelegateCommand clickCommand{ nullptr };
-        ctrltest::DelegateCommand openCommand{ nullptr };
-
     };
 }
 

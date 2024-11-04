@@ -4,6 +4,8 @@
 #include "MainPageViewModel.g.cpp"
 #endif
 
+#include "..\ctrltestLib\ctrltestLibExported.h"
+
 using namespace winrt;
 using namespace ctrltest::implementation;
 using namespace Windows::Foundation;
@@ -52,56 +54,39 @@ void MainPageViewModel::AnotherClick(IInspectable const& parameter)
 
 {
 
-    hstring commandParameter = unbox_value<hstring>(parameter);
+	hstring commandParameter = unbox_value<hstring>(parameter);
 
-    if (commandParameter == L"OpenCommand")
+	if (commandParameter == L"OpenCommand")
+	{
+		// Handle Open command
+	}
 
-    {
+	else if (commandParameter == L"SaveCommand")
+	{
+		// Handle Save command
+	}
 
-        // Handle Open command
+	else if (commandParameter == L"DemoA")
+	{
+		CBMTest1DlgExport dlg;
+		dlg.DoModal();
+	}
 
-    }
+	else if (commandParameter == L"DemoB")
+	{
+		CBMTest2DlgExport dlg2;
+		dlg2.DoModal();
+	}
 
-    else if (commandParameter == L"SaveCommand")
-
-    {
-
-        // Handle Save command
-
-    }
-
-    else if (commandParameter == L"DemoA")
-
-    {
-
-        // Handle DemoA command
-
-    }
-
-    else if (commandParameter == L"DemoB")
-
-    {
-
-        // Handle DemoB command
-
-    }
-
-    else if (commandParameter == L"DemoC")
-
-    {
-
-        // Handle DemoC command
-
-    }
-
-    else
-
-    {
-
-        // Handle unknown command
-
-    }
-
+	else if (commandParameter == L"DemoC")
+	{
+		CBMTest3DlgExport dlg3;
+		dlg3.DoModal();
+	}
+	else
+	{
+		// Handle unknown command
+	}
 }
 
 

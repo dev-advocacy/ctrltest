@@ -5,17 +5,12 @@
 #endif
 #include "INavigationService.h"
 
-
-
 #include <wil/cppwinrt.h>
 #include <wil/cppwinrt_helpers.h>
 #include <winrt/Microsoft.UI.Dispatching.h>
 
-#include "..\ctrltestLib\ctrltestLibExported.h"
-
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
-
 
 #include "MainViewModel.h"
 
@@ -25,7 +20,6 @@ namespace winrt::ctrltest::implementation
 	{
 		return m_mainViewModel;
 	}
-
 	MainWindow::MainWindow()
 	{		
 		m_mainViewModel = winrt::make<ctrltest::implementation::MainViewModel>();
@@ -38,30 +32,10 @@ namespace winrt::ctrltest::implementation
 
 	void MainWindow::MainFrame_Navigated(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs const& e)
 	{
-		/*if (!MainFrame().CanGoBack())
+		if (!MainFrame().CanGoBack())
 		{
 			INavigationService _navigationService;
 			_navigationService.InitializeFrame(MainWindow::MainFrame());
-		}*/
+		}
 	}
-
-	
-
-	
-  /*  void MainWindow::myButton2_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-    {
-        CBMTest1DlgExport dlg;
-	*/	//dlg.DoModal();
-
-		//CBMTest2DlgExport dlg2;
-		//dlg2.DoModal();
-
-		//CBMTest3DlgExport dlg3;
-		//dlg3.DoModal();
-
-  //  }
-
-
 }
-
-

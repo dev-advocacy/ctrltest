@@ -4,24 +4,29 @@
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error "include 'pch.h' before including this file for PCH"
+    #error "include 'pch.h' before including this file for PCH"
 #endif
 
-#include "resource.h"		// main symbols
+#include "resource.h"       // main symbols
 
-
-// CctrltestLibApp
-// See ctrltestLib.cpp for the implementation of this class
-//
-
+/// <summary>
+/// The application class for the ctrltestLib DLL.
+/// </summary>
 class CctrltestLibApp : public CWinApp
 {
 public:
-	CctrltestLibApp();
+    /// <summary>
+    /// Constructor for CctrltestLibApp.
+    /// </summary>
+    CctrltestLibApp();
 
-// Overrides
+    // Overrides
 public:
-	virtual BOOL InitInstance();
+    /// <summary>
+    /// Initializes the instance of the application.
+    /// </summary>
+    /// <returns>TRUE if initialization is successful, otherwise FALSE.</returns>
+    virtual BOOL InitInstance();
 
-	DECLARE_MESSAGE_MAP()
+    DECLARE_MESSAGE_MAP()
 };

@@ -1,4 +1,7 @@
 #include "pch.h"
+
+#define CTRLTESTLIB
+
 #include "ctrltestLibExported.h"
 #include "bbutton.h"
 
